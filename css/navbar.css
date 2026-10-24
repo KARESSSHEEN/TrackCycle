@@ -1,0 +1,104 @@
+.navbar{
+    width:min(1240px, calc(100% - 48px));
+    min-height:68px;
+    margin:14px auto 0;
+    padding:10px 16px 10px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+    z-index:999;
+    border:1px solid rgba(99,199,178,.24);
+    border-radius:999px;
+    background:rgba(255,255,255,.88);
+    box-shadow:0 12px 32px rgba(21,128,61,.1);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--primary-deep);
+    font-size:22px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.logo i{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:34px;
+    height:34px;
+    border-radius:12px;
+    background:linear-gradient(135deg, var(--primary-soft-2), var(--secondary));
+    color:var(--primary-deep);
+    font-size:19px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.nav-links a{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    min-height:42px;
+    padding:0 13px;
+    color:var(--text-light);
+    border-radius:999px;
+    font-size:14px;
+    font-weight:500;
+    transition:var(--transition);
+}
+
+.nav-links a i{
+    flex:0 0 auto;
+    font-size:17px;
+}
+
+.nav-links a:hover{
+    color:var(--primary-deep);
+    background:rgba(220,252,231,.68);
+}
+
+.nav-links a.active{
+    color:var(--primary-deep);
+    background:linear-gradient(135deg, rgba(220,252,231,.95), rgba(221,247,241,.95));
+    font-weight:600;
+    box-shadow:inset 0 0 0 1px rgba(21,128,61,.08);
+}
+.nav-links a:focus-visible{
+    outline:3px solid rgba(21,128,61,.42);
+    outline-offset:3px;
+}
+/* Floating glass navigation refinement */
+.navbar{
+    position:sticky;
+    top:12px;
+    width:min(1280px, calc(100% - 40px));
+    min-height:72px;
+    margin:12px auto 0;
+    padding:10px 18px 10px 22px;
+    background:rgba(255,255,255,.84);
+    border:1px solid rgba(99,199,178,.32);
+    box-shadow:0 16px 42px rgba(12,84,66,.14), inset 0 1px 0 rgba(255,255,255,.92);
+    backdrop-filter:blur(18px) saturate(1.2);
+    -webkit-backdrop-filter:blur(18px) saturate(1.2);
+}
+.nav-links a{
+    min-height:44px;
+    padding:0 15px;
+    font-weight:600;
+}
+.nav-links a.active{
+    box-shadow:inset 0 0 0 1px rgba(21,128,61,.12), 0 5px 14px rgba(21,128,61,.07);
+}
+@media(max-width:900px){
+    .navbar{top:8px;}
+}

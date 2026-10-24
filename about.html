@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | TrackCycle</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body data-page="about">
+
+<nav class="navbar" aria-label="Main navigation">
+    <div class="logo">
+        <i class="ri-taxi-line"></i>
+        TrackCycle
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="ri-home-5-line"></i>Home</a></li>
+        <li><a href="reserve.html"><i class="ri-map-pin-line"></i>Reserve</a></li>
+        <li><a href="trip.html"><i class="ri-taxi-line"></i>Live Trip</a></li>
+        <li><a href="history.html"><i class="ri-history-line"></i>History</a></li>
+        <li><a class="active" href="about.html"><i class="ri-information-line"></i>About</a></li>
+    <li><a data-account-link class="account-link" href="login.html"><i class="ri-login-circle-line"></i> Login</a></li>
+</ul>
+</nav>
+
+<section class="page-banner">
+    <p class="page-kicker">LOCAL RIDES, MADE SIMPLE</p>
+    <h1>Built around your everyday journey</h1>
+    <p>TrackCycle brings reservations, station queues, and trip records into one easy-to-use place.</p>
+</section>
+
+<section class="about-intro">
+    <div class="about-intro-copy">
+        <p class="page-kicker">ABOUT TRACKCYCLE</p>
+        <h2>A clearer way to plan a local ride.</h2>
+        <p>TrackCycle is a frontend tricycle seat reservation and queue management experience for BARANGAY A. Passengers can choose a pickup station and destination, review fares, and keep booking details close at hand.</p>
+        <a class="btn-primary" href="reserve.html"><i class="ri-arrow-right-line"></i> Plan a ride</a>
+    </div>
+    <div class="about-intro-art">
+        <img src="assets/images/tricycle1.png" alt="TrackCycle tricycle illustration on a mint route">
+        <span><i class="ri-leaf-line"></i> Designed for local journeys</span>
+    </div>
+</section>
+
+<section class="about-feature-section">
+    <div class="section-title">
+        <p class="page-kicker">WHAT YOU CAN DO</p>
+        <h2>Simple tools for each part of the trip</h2>
+    </div>
+    <div class="about-feature-grid">
+        <article class="about-card">
+            <span class="about-card-icon"><i class="ri-map-pin-line"></i></span>
+            <h3>Reserve a seat</h3>
+            <p>Choose your station, destination, and passenger mix, then review the fare before confirming.</p>
+        </article>
+        <article class="about-card">
+            <span class="about-card-icon"><i class="ri-timer-line"></i></span>
+            <h3>Follow the queue</h3>
+            <p>See your saved queue status, passenger count, and departure countdown.</p>
+        </article>
+        <article class="about-card">
+            <span class="about-card-icon"><i class="ri-history-line"></i></span>
+            <h3>Keep trip records</h3>
+            <p>Review booking and completed trip details from the History page.</p>
+        </article>
+    </div>
+</section>
+
+<section class="about-how">
+    <div>
+        <p class="page-kicker">HOW IT WORKS</p>
+        <h2>From selection to boarding</h2>
+        <p>Reservations are stored in this browser. TrackCycle uses pickup station to group active queues and shows their current local timer status.</p>
+    </div>
+    <ol class="about-how-steps">
+        <li><span>01</span><div><h3>Choose your ride</h3><p>Select a pickup station and drop-off destination.</p></div></li>
+        <li><span>02</span><div><h3>Review the details</h3><p>Check passenger categories, discounts, and the fare summary.</p></div></li>
+        <li><span>03</span><div><h3>Follow the station queue</h3><p>Use Live Trip to check queue progress and the saved departure timer.</p></div></li>
+    </ol>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box footer-brand">
+            <h2><i class="ri-taxi-line"></i> TrackCycle</h2>
+            <p>Local tricycle reservations and station queue information for BARANGAY A.</p>
+        </div>
+        <div class="footer-box">
+            <h3>Explore TrackCycle</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reserve.html">Reserve a ride</a></li>
+                <li><a href="trip.html">Live Trip</a></li>
+                <li><a href="history.html">Ride history</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-team" aria-label="TrackCycle project team">
+        <div class="footer-team-heading"><i class="ri-team-line"></i><span>Project Team</span></div>
+        <ul class="footer-team-list">
+            <li><i class="ri-user-3-line"></i> Karess Sheen Canillo</li>
+            <li><i class="ri-user-3-line"></i> Lyrely Betuin</li>
+            <li><i class="ri-user-3-line"></i> Toni Kristal Rojo</li>
+            <li><i class="ri-user-3-line"></i> Kobe Gamboa</li>
+            <li><i class="ri-user-3-line"></i> Marben Gabasa</li>
+        </ul>
+    </div>
+    <div class="footer-bottom"><p>TrackCycle · A community ride reservation project for BARANGAY A.</p></div>
+</footer>
+
+<script src="js/storage.js"></script>
+<script src="js/queue.js"></script>
+<script src="js/timer.js"></script>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

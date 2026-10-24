@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History | TrackCycle</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body data-page="history">
+
+<nav class="navbar" aria-label="Main navigation">
+    <div class="logo">
+        <i class="ri-taxi-line"></i>
+        TrackCycle
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="ri-home-5-line"></i>Home</a></li>
+        <li><a href="reserve.html"><i class="ri-map-pin-line"></i>Reserve</a></li>
+        <li><a href="trip.html"><i class="ri-taxi-line"></i>Live Trip</a></li>
+        <li><a class="active" href="history.html"><i class="ri-history-line"></i>History</a></li>
+        <li><a href="about.html"><i class="ri-information-line"></i>About</a></li>
+    <li><a data-account-link class="account-link" href="login.html"><i class="ri-login-circle-line"></i> Login</a></li>
+</ul>
+</nav>
+
+<section class="page-banner">
+    <p class="page-kicker">YOUR TRACKCYCLE RECORDS</p>
+    <h1>Ride History</h1>
+    <p>View your reservations and completed trips.</p>
+</section>
+
+<section class="history-container">
+    <div class="history-panel">
+        <div class="history-tabs" role="tablist" aria-label="History type">
+            <button
+                class="history-tab active"
+                id="bookingsTab"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="bookingHistoryPanel"
+                data-history-tab="bookings"
+            >
+                <i class="ri-receipt-line" aria-hidden="true"></i>
+                Booking History
+            </button>
+            <button
+                class="history-tab"
+                id="tripsTab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="tripHistoryPanel"
+                data-history-tab="trips"
+            >
+                <i class="ri-route-line" aria-hidden="true"></i>
+                Trip History
+            </button>
+        </div>
+
+        <div
+            class="history-tab-panel"
+            id="bookingHistoryPanel"
+            role="tabpanel"
+            aria-labelledby="bookingsTab"
+        >
+            <div id="historyContent">
+                <div class="history-card empty-history">
+                    <i class="ri-file-list-3-line"></i>
+                    <h2>No history yet</h2>
+                    <p>
+                        Your completed reservations will appear here once you finish a trip.
+                    </p>
+                    <a href="reserve.html" class="reserve-btn">
+                        <i class="ri-add-line"></i>
+                        Reserve Your First Ride
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="history-tab-panel"
+            id="tripHistoryPanel"
+            role="tabpanel"
+            aria-labelledby="tripsTab"
+            hidden
+        >
+            <div id="tripHistoryContent"></div>
+        </div>
+    </div>
+</section>
+
+<dialog class="history-delete-dialog" id="historyDeleteDialog" aria-labelledby="historyDeleteTitle" aria-describedby="historyDeleteMessage historyDeleteWarning">
+    <div class="history-delete-modal">
+        <button class="history-delete-close" id="historyDeleteClose" type="button" aria-label="Close delete confirmation">
+            <i class="ri-close-line" aria-hidden="true"></i>
+        </button>
+        <div class="history-delete-icon" aria-hidden="true">
+            <i class="ri-delete-bin-line"></i>
+        </div>
+        <h2 id="historyDeleteTitle">Delete record?</h2>
+        <p id="historyDeleteMessage"></p>
+        <p class="history-delete-warning" id="historyDeleteWarning">This action cannot be undone.</p>
+        <div class="history-delete-dialog-actions">
+            <button class="history-delete-cancel" id="historyDeleteCancel" type="button">Cancel</button>
+            <button class="history-delete-confirm" id="historyDeleteConfirm" type="button">
+                <i class="ri-delete-bin-line" aria-hidden="true"></i>
+                Delete
+            </button>
+        </div>
+    </div>
+</dialog>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box footer-brand">
+            <h2><i class="ri-taxi-line"></i> TrackCycle</h2>
+            <p>Local tricycle reservations and station queue information for BARANGAY A.</p>
+        </div>
+        <div class="footer-box">
+            <h3>Explore TrackCycle</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reserve.html">Reserve a ride</a></li>
+                <li><a href="trip.html">Live Trip</a></li>
+                <li><a href="history.html">Ride history</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-team" aria-label="TrackCycle project team">
+        <div class="footer-team-heading"><i class="ri-team-line"></i><span>Project Team</span></div>
+        <ul class="footer-team-list">
+            <li><i class="ri-user-3-line"></i> Karess Sheen Canillo</li>
+            <li><i class="ri-user-3-line"></i> Lyrely Betuin</li>
+            <li><i class="ri-user-3-line"></i> Toni Kristal Rojo</li>
+            <li><i class="ri-user-3-line"></i> Kobe Gamboa</li>
+            <li><i class="ri-user-3-line"></i> Marben Gabasa</li>
+        </ul>
+    </div>
+    <div class="footer-bottom"><p>TrackCycle · A community ride reservation project for BARANGAY A.</p></div>
+</footer>
+
+<dialog id="editReservationDialog" class="history-delete-dialog edit-reservation-dialog" aria-labelledby="editReservationTitle"><form id="editReservationForm" class="edit-reservation-form"><h2 id="editReservationTitle"><i class="ri-edit-2-line"></i> Edit reservation</h2><p>Changes are allowed only while your queue is waiting. Pickup station cannot be changed.</p><label>Destination<select name="destination" required></select></label><label>Total passengers<input name="seats" type="number" min="1" max="6" required></label><div class="edit-counts"><label>Regular<input name="regular" type="number" min="0" max="6" required></label><label>Student<input name="student" type="number" min="0" max="6" required></label><label>Senior<input name="senior" type="number" min="0" max="6" required></label></div><label class="edit-check"><input type="checkbox" name="studentConfirmed"> Confirm student eligibility for ₱5 discount each</label><label class="edit-check"><input type="checkbox" name="seniorConfirmed"> Confirm senior eligibility for ₱5 discount each</label><p id="editReservationFare" class="edit-fare"></p><p id="editReservationMessage" class="auth-message" role="alert"></p><div class="edit-actions"><button type="button" id="editReservationCancel" class="auth-secondary">Cancel</button><button type="submit" class="auth-submit">Save changes</button></div></form></dialog><script src="data/destinations.js"></script><script src="js/storage.js"></script>
+<script src="js/history.js"></script>
+<script src="js/queue.js"></script>
+<script src="js/timer.js"></script>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Trip | TrackCycle</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body data-page="trip">
+
+<nav class="navbar" aria-label="Main navigation">
+
+    <div class="logo">
+        <i class="ri-taxi-line"></i>
+        TrackCycle
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">
+                <i class="ri-home-5-line"></i>
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="reserve.html">
+                <i class="ri-map-pin-line"></i>
+                Reserve
+            </a>
+        </li>
+
+        <li>
+            <a class="active" href="trip.html">
+                <i class="ri-taxi-line"></i>
+                Live Trip
+            </a>
+        </li>
+
+        <li>
+            <a href="history.html">
+                <i class="ri-history-line"></i>
+                History
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                <i class="ri-information-line"></i>
+                About
+            </a>
+        </li>
+
+    <li><a data-account-link class="account-link" href="login.html"><i class="ri-login-circle-line"></i> Login</a></li>
+</ul>
+
+</nav>
+
+<section class="page-banner">
+    <p class="page-kicker">YOUR JOURNEY AT A GLANCE</p>
+    <h1>Live Trip</h1>
+    <p>Follow your reservation queue and departure timer.</p>
+</section>
+
+<section class="trip-container">
+
+    <div class="trip-dashboard">
+        <section class="trip-card current-trip-card" aria-labelledby="currentTripTitle">
+            <div class="trip-section-heading">
+                <div>
+                    <p class="page-kicker">RESERVATION OVERVIEW</p>
+                    <h2 id="currentTripTitle">Your current ride</h2>
+                </div>
+                <a class="trip-history-link" href="history.html"><i class="ri-history-line"></i> View history</a>
+            </div>
+            <div class="trip-grid">
+                <div class="trip-item">
+                    <i class="ri-qr-code-line" aria-hidden="true"></i>
+                    <h4>Queue ID</h4>
+                    <p>No active queue</p>
+                </div>
+                <div class="trip-item">
+                    <i class="ri-map-pin-line" aria-hidden="true"></i>
+                    <h4>Pickup station</h4>
+                    <p>No active trip</p>
+                </div>
+                <div class="trip-item">
+                    <i class="ri-route-line" aria-hidden="true"></i>
+                    <h4>Destination</h4>
+                    <p>No active trip</p>
+                </div>
+                <div class="trip-item">
+                    <i class="ri-group-line" aria-hidden="true"></i>
+                    <h4>Passengers / capacity</h4>
+                    <p>0 / 6</p>
+                </div>
+                <div class="trip-item">
+                    <i class="ri-time-line" aria-hidden="true"></i>
+                    <h4>Departure countdown</h4>
+                    <p><span data-trip-timer>No active trip</span></p>
+                    <small id="estimatedDeparture">Estimated departure unavailable</small>
+                </div>
+                <div class="trip-item">
+                    <i class="ri-checkbox-circle-line" aria-hidden="true"></i>
+                    <h4>Queue status</h4>
+                    <p><span class="status-badge status-completed">No Active Booking</span></p>
+                </div>
+            </div>
+            <section class="trip-progress-section" aria-labelledby="tripProgressTitle">
+                <div class="trip-section-heading">
+                    <div>
+                        <h3 id="tripProgressTitle">Trip progress</h3>
+                        <p>Queue updates are based on your saved reservation.</p>
+                    </div>
+                </div>
+                <ol class="trip-progress" id="tripProgress">
+                    <li data-trip-stage="waiting"><span class="trip-progress-dot"></span><span>Waiting for passengers</span></li>
+                    <li data-trip-stage="boarding"><span class="trip-progress-dot"></span><span>Boarding / collecting</span></li>
+                    <li data-trip-stage="completed"><span class="trip-progress-dot"></span><span>Departed</span></li>
+                </ol>
+            </section>
+        </section>
+
+        <aside class="trip-route-card">
+            <div class="trip-route-copy">
+                <p class="page-kicker">YOUR ROUTE</p>
+                <h2>From station to destination</h2>
+                <p>This route illustration is decorative and does not show live GPS location.</p>
+            </div>
+            <div class="trip-route-visual" aria-hidden="true">
+                <span class="route-point route-origin"><i class="ri-map-pin-2-fill"></i></span>
+                <span class="route-dash"></span>
+                <img src="assets/images/tricycle1.png" alt="">
+                <span class="route-dash"></span>
+                <span class="route-point route-destination"><i class="ri-flag-fill"></i></span>
+            </div>
+            <div class="trip-route-labels"><span id="tripOriginLabel">Pickup</span><span id="tripDestinationLabel">Drop-off</span></div>
+        </aside>
+
+        <section class="active-routes-section" aria-labelledby="activeRoutesTitle">
+            <div class="trip-section-heading">
+                <div>
+                    <p class="page-kicker">STATION ACTIVITY</p>
+                    <h2 id="activeRoutesTitle">Active queues</h2>
+                </div>
+                <span class="trip-info-note"><i class="ri-information-line"></i> Queues are grouped by pickup station</span>
+            </div>
+            <div id="activeRoutes" class="active-routes-list" aria-live="polite">
+                <p class="active-routes-empty">There are no active queues right now.</p>
+            </div>
+        </section>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box footer-brand">
+            <h2><i class="ri-taxi-line"></i> TrackCycle</h2>
+            <p>Local tricycle reservations and station queue information for BARANGAY A.</p>
+        </div>
+        <div class="footer-box">
+            <h3>Explore TrackCycle</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reserve.html">Reserve a ride</a></li>
+                <li><a href="trip.html">Live Trip</a></li>
+                <li><a href="history.html">Ride history</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-team" aria-label="TrackCycle project team">
+        <div class="footer-team-heading"><i class="ri-team-line"></i><span>Project Team</span></div>
+        <ul class="footer-team-list">
+            <li><i class="ri-user-3-line"></i> Karess Sheen Canillo</li>
+            <li><i class="ri-user-3-line"></i> Lyrely Betuin</li>
+            <li><i class="ri-user-3-line"></i> Toni Kristal Rojo</li>
+            <li><i class="ri-user-3-line"></i> Kobe Gamboa</li>
+            <li><i class="ri-user-3-line"></i> Marben Gabasa</li>
+        </ul>
+    </div>
+    <div class="footer-bottom"><p>TrackCycle · A community ride reservation project for BARANGAY A.</p></div>
+</footer>
+
+
+<script src="js/storage.js"></script>
+<script src="js/queue.js"></script>
+<script src="js/status.js"></script>
+<script src="js/timer.js"></script>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

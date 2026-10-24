@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>My Profile | TrackCycle</title><link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/global.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/navbar.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/auth.css"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"></head><body data-page="profile"><nav class="navbar" aria-label="Main navigation"><div class="logo"><i class="ri-taxi-line"></i> TrackCycle</div><ul class="nav-links"><li><a href="index.html"><i class="ri-home-5-line"></i> Home</a></li><li><a href="reserve.html"><i class="ri-map-pin-line"></i> Reserve</a></li><li><a href="trip.html"><i class="ri-taxi-line"></i> Live Trip</a></li><li><a href="history.html"><i class="ri-history-line"></i> History</a></li><li><a href="about.html"><i class="ri-information-line"></i> About</a></li><li><a data-account-link class="account-link" href="login.html"><i class="ri-login-circle-line"></i> Login</a></li></ul></nav><main class="auth-layout"><section class="auth-card"><div class="auth-symbol"><i class="ri-user-smile-line"></i></div><h1>My profile</h1><p class="auth-sub">Your personal TrackCycle demo space.</p><div class="profile-line"><span class="profile-avatar"><i class="ri-user-3-line"></i></span><div><strong data-profile-name></strong><small data-profile-email></small></div></div><div class="profile-line"><span class="profile-avatar"><i class="ri-receipt-line"></i></span><div><strong><span data-profile-count>0</span> personal bookings</strong><small>Saved in this browser</small></div></div><button class="auth-secondary" type="button" data-edit-profile><i class="ri-edit-line"></i> Edit profile</button><form class="auth-form auth-hidden" data-profile-form style="margin:18px 0"><div class="auth-field"><label for="editName">Full name</label><div class="auth-input-wrap"><i class="ri-user-line"></i><input id="editName" name="name" maxlength="80" required></div></div><div class="auth-field"><label for="editEmail">Email</label><div class="auth-input-wrap"><i class="ri-mail-line"></i><input id="editEmail" name="email" type="email" required></div></div><p class="auth-message" data-profile-message role="alert"></p><button class="auth-submit" type="submit"><i class="ri-check-line"></i> Save changes</button><button class="auth-secondary" type="button" data-cancel-profile>Cancel</button></form><a class="auth-submit" href="reserve.html" style="text-decoration:none"><i class="ri-map-pin-add-line"></i> Reserve a ride</a><p style="margin:14px 0"><a href="history.html">View ride history <i class="ri-arrow-right-line"></i></a></p><button class="auth-secondary" data-logout type="button"><i class="ri-logout-box-r-line"></i> Log out</button><p class="auth-notice">Demo accounts are browser-local and are not secure authentication.</p></section></main><footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box footer-brand">
+            <h2><i class="ri-taxi-line"></i> TrackCycle</h2>
+            <p>Local tricycle reservations and station queue information for BARANGAY A.</p>
+        </div>
+        <div class="footer-box">
+            <h3>Explore TrackCycle</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reserve.html">Reserve a ride</a></li>
+                <li><a href="trip.html">Live Trip</a></li>
+                <li><a href="history.html">Ride history</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-team" aria-label="TrackCycle project team">
+        <div class="footer-team-heading"><i class="ri-team-line"></i><span>Project Team</span></div>
+        <ul class="footer-team-list">
+            <li><i class="ri-user-3-line"></i> Karess Sheen Canillo</li>
+            <li><i class="ri-user-3-line"></i> Lyrely Betuin</li>
+            <li><i class="ri-user-3-line"></i> Toni Kristal Rojo</li>
+            <li><i class="ri-user-3-line"></i> Kobe Gamboa</li>
+            <li><i class="ri-user-3-line"></i> Marben Gabasa</li>
+        </ul>
+    </div>
+    <div class="footer-bottom"><p>TrackCycle · A community ride reservation project for BARANGAY A.</p></div>
+</footer><script src="js/storage.js"></script><script src="js/auth.js"></script></body></html>
